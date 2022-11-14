@@ -9,4 +9,15 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+#displaying error messages back to the user after they attempt to create a store with incomplete info
+
+puts "Please provide a name for your store :)"
+store_name = gets.chomp
+
+new_store = Store.create(name: store_name)
+mistakes =  new_store.errors.full_messages
+
+mistakes.each { |mistake| 
+  puts mistake
+}
+
