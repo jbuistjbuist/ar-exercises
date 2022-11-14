@@ -10,3 +10,4 @@ puts "----------"
 @store1.name = "Burberry"
 @store1.save
 
+
